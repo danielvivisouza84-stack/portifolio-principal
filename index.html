@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Daniel Ribeiro de Souza</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        header p {
+            margin-top: 0.8rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .projetos-grade {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .projeto-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .projeto-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            border-left: 4px solid #3498db;
+        }
+
+        .projeto-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .projeto-card p {
+            color: #555;
+            margin-bottom: 1.2rem;
+        }
+
+        .botao-acessar {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .botao-acessar:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Daniel Ribeiro de Souza</h1>
+        <p>Desenvolvedor Web | HTML5 • CSS3 • JavaScript</p>
+    </header>
+
+    <div class="container">
+        <h2>Meus Projetos</h2>
+
+        <div class="projetos-grade">
+            <!-- Projeto 1 -->
+            <div class="projeto-card" onclick="abrirProjeto('apresentacao')">
+                <h3>📄 Página de Apresentação</h3>
+                <p>Página profissional com meus dados, habilidades e contato. Possui mensagem de boas-vindas e troca de cores interativa.</p>
+                <button class="botao-acessar">Ver Projeto</button>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="projeto-card" onclick="abrirProjeto('site-empresa')">
+                <h3>🏢 Site Institucional</h3>
+                <p>Modelo completo para pequenas empresas: menu responsivo, seções de conteúdo e formulário de contato funcional.</p>
+                <button class="botao-acessar">Ver Projeto</button>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="projeto-card" onclick="abrirProjeto('servicos-precos')">
+                <h3>💰 Serviços e Preços</h3>
+                <p>Página organizada com planos de serviço e valores, com efeito visual e mensagem de confirmação ao clicar.</p>
+                <button class="botao-acessar">Ver Projeto</button>
+            </div>
+
+            <!-- Projeto 4 -->
+            <div class="projeto-card" onclick="abrirProjeto('calculadora')">
+                <h3>🧮 Calculadora Simples</h3>
+                <p>Ferramenta funcional com operações matemáticas básicas, demonstrando lógica de programação com JavaScript.</p>
+                <button class="botao-acessar">Ver Projeto</button>
+            </div>
+
+            <!-- Projeto 5 -->
+            <div class="projeto-card" onclick="abrirProjeto('galeria')">
+                <h3>🖼️ Galeria de Projetos</h3>
+                <p>Área para exibir trabalhos realizados, com efeito de ampliação e visualização em destaque.</p>
+                <button class="botao-acessar">Ver Projeto</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Daniel Ribeiro de Souza | Desenvolvido com HTML, CSS e JavaScript</p>
+    </footer>
+
+    <script>
+        // Função para abrir cada projeto
+        function abrirProjeto(nomePasta) {
+            // Altere os caminhos abaixo conforme organizar seus arquivos
+            const caminho = `../${nomePasta}/index.html`;
+            window.open(caminho, '_blank');
+        }
+
+        // Mensagem de boas-vindas ao abrir o portfólio
+        window.onload = function() {
+            console.log("Portfólio carregado com sucesso!");
+            // Se quiser mostrar mensagem na tela:
+            // alert("Bem-vindo ao meu portfólio!");
+        };
+    </script>
+
+</body>
+</html>
